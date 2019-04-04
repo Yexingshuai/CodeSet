@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MyTextView">
+        <attr name="text" format="string" />
+        <attr name="textColor" format="color" />
+        <!--dimension  表示宽高 ，大小-->
+        <attr name="textSize" format="dimension" />
+        <attr name="maxLength" format="integer" />
+
+        <!--有的属性 是系统的，不许在重名了。-->
+        <attr name="backgrouznd" format="reference|color" />
+
+        <attr name="inputType">
+            <enum name="number" value="1"></enum>
+            <enum name="text" value="2"></enum>
+            <enum name="password" value="3"></enum>
+        </attr>
+
+    </declare-styleable>
+
+
+    <declare-styleable name="QQStepView">
+
+        <attr name="outerColor" format="color"></attr>
+        <attr name="innerColor" format="color"></attr>
+        <attr name="borderWidth" format="dimension"></attr>
+        <attr name="stepTextSize" format="dimension"></attr>
+        <attr name="stepTextColor" format="color"></attr>
+        <attr name="stepMax" format="integer"></attr>
+        <attr name="stepCurrent" format="integer"></attr>
+
+    </declare-styleable>
+
+    <!--字体颜色变换-->
+    <declare-styleable name="ColorTrackTextView">
+        <attr name="originColor" format="color"></attr>
+        <attr name="changeColor" format="color"></attr>
+
+    </declare-styleable>
+
+    <!--RatingBar-->
+    <declare-styleable name="RatingBar">
+        <attr name="starNormal" format="reference"></attr>
+        <attr name="starFocus" format="reference"></attr>
+        <attr name="gradeNumber" format="integer"></attr>
+    </declare-styleable>
+
+
+    <!--CountDownView-->
+    <declare-styleable name="CountDownView">
+        <attr name="outerColor1" format="color"></attr>
+        <attr name="innerColor1" format="color"></attr>
+        <attr name="time" format="integer"></attr>
+
+    </declare-styleable>
+
+
+    <!-- X方向上的位移 -->
+    <attr name="translationXIn" format="float" />
+    <attr name="translationXOut" format="float" />
+    <!-- Y方向上的位移 -->
+    <attr name="translationYIn" format="float" />
+    <attr name="translationYOut" format="float" />
+
+
+    <declare-styleable name="DropDownMenu">
+        <attr name="ddunderlineColor" format="color" />
+        <attr name="dddividerColor" format="color" />
+        <attr name="ddtextSelectedColor" format="color" />
+        <attr name="ddtextUnselectedColor" format="color" />
+        <attr name="ddmenuBackgroundColor" format="color" />
+        <attr name="ddmaskColor" format="color" />
+        <attr name="ddmenuTextSize" format="dimension" />
+        <attr name="ddmenuSelectedIcon" format="reference" />
+        <attr name="ddmenuUnselectedIcon" format="reference" />
+        <attr name="ddmenuMenuHeightPercent" format="float" />
+    </declare-styleable>
+
+</resources>

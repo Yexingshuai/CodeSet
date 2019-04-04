@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="uitest.star.com.uiset.demo.view.dropdown.DropdownViewActivity">
+
+    <include layout="@layout/toolbar_layout" />
+
+
+    <uitest.star.com.uiset.ui.widget.DropDownMenu
+        android:id="@+id/dropDownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:dddividerColor="@color/transparent"
+        app:ddmaskColor="@color/mask_color"
+        app:ddmenuBackgroundColor="@color/white"
+        app:ddmenuMenuHeightPercent="0.4"
+        app:ddmenuSelectedIcon="@drawable/dropdown_check_point"
+        app:ddmenuTextSize="13sp"
+        app:ddmenuUnselectedIcon="@drawable/dropdown_normal_point"
+        app:ddtextSelectedColor="@color/green"
+        app:ddtextUnselectedColor="@color/colorBlack"
+        app:ddunderlineColor="@color/mask_color" />
+
+
+</LinearLayout>

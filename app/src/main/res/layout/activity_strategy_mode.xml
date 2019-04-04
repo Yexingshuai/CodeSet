@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="uitest.star.com.uiset.demo.framework.strategy.StrategyModeActivity">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="策略模式定义了一系列算法，并将每一个算法封装起来，而且他们之间可以互相切换，策略模式让算法独立使他的客户独立而变化" />
+
+</LinearLayout>

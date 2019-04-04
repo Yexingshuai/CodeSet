@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="uitest.star.com.uiset.demo.framework.handler.HandlerActivity">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:text="handler.sendMessage()方法， 其实只是把我们的Message加入了消息队列，队列采用的是链表的方式，按照when也就是时间排序。 还没有干其他" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:padding="6dp"
+        android:text="为什么MessageQueue消息队列采用链表方式存储Message?\n 链表是增加删除快，数组是查询快（因为他有角标）" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:padding="6dp"
+        android:text="在应用启动的时候，ActivityThread的入口函数main()方法已经帮我们做好了准备工作。Looper.prepare.创建Looper的时候，保证一个Thread线程中只有一个looper对象" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:padding="6dp"
+        android:text="详情看代码!!!!!!!!!!!" />
+</LinearLayout>

@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">UISet</string>
+    <string name="bottom_item1">风花</string>
+    <string name="bottom_item2">雪月</string>
+    <string name="bottom_item3">颜容</string>
+
+    <string name="text_web_ceo">WEB ANALYTICS</string>
+    <string name="text_web_dev">WEB DEVELOPER</string>
+    <string name="text_e_commerce">e-Commerce</string>
+
+
+    <string-array name="personName">
+        <item>Ashbur</item>
+        <item>Baird</item>
+        <item>Bart</item>
+        <item>Clifford</item>
+        <item>Darnell</item>
+        <item>Eden</item>
+        <item>Edgar</item>
+        <item>Franklin</item>
+        <item>Gilbert</item>
+        <item>Haley</item>
+        <item>James</item>
+        <item>Kenneth</item>
+        <item>Lester</item>
+        <item>Marvin</item>
+        <item>Nathaniel</item>
+    </string-array>
+
+    <string-array name="Lines">
+        <item>你好</item>
+        <item>好帅</item>
+        <item>人挺不错</item>
+        <item>善良体贴</item>
+        <item>有本启奏无本退朝</item>
+        <item>so good</item>
+        <item>没有什么能够阻挡</item>
+        <item>我对自由的向往</item>
+        <item>好吧</item>
+        <item>呵呵</item>
+        <item>对不起</item>
+        <item>给我个机会</item>
+        <item>要我做什么都行</item>
+        <item>你好</item>
+        <item>你好</item>
+        <item>三年之后又三年</item>
+        <item>你好</item>
+        <item>挺利索的</item>
+        <item>迟早要还的</item>
+        <item>出来跑</item>
+        <item>怎么给你机会</item>
+        <item>你好</item>
+        <item>你好</item>
+        <item>和警察去说</item>
+        <item>有什么</item>
+        <item>你好</item>
+        <item>怎么给你机会</item>
+        <item>你好</item>
+        <item>对不起我是警察</item>
+        <item>你好</item>
+        <item>那就是要我死</item>
+        <item>谁知道</item>
+        <item>你好</item>
+        <item>我想做个好人</item>
+        <item>出来混嘛</item>
+        <item>从来只有事情改变人</item>
+        <item>多做善事</item>
+        <item>你好</item>
+        <item>我也读过警校</item>
+        <item>老大啊</item>
+        <item>抓贼啊</item>
+        <item>我要个向窗的位置</item>
+        <item>都快十年了</item>
+        <item>路漫漫其修远兮</item>
+        <item>吾将上下而求索</item>
+        <item>以梦为马</item>
+        <item>哈哈哈</item>
+        <item>给我一首歌的时间</item>
+        <item>安静</item>
+        <item>发如雪</item>
+        <item>千里之外</item>
+        <item>暗号</item>
+    </string-array>
+</resources>

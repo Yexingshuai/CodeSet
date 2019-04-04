@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="uitest.star.com.uiset.demo.view.ui.AppUIActivity">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_30"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    style="@style/ButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="普通按钮" />
+
+                <Button
+                    style="@style/ButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_20"
+                    android:enabled="false"
+                    android:text="禁用了的按钮" />
+
+                <Button
+                    style="@style/RectButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_20"
+                    android:text="不带圆角的" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_80"
+                android:layout_marginRight="@dimen/space_80"
+                android:layout_marginTop="@dimen/space_40"
+                android:orientation="horizontal">
+
+                <EditText
+                    style="@style/EditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="请输入验证码" />
+
+                <uitest.star.com.uiset.ui.widget.CountdownView2
+                    android:id="@+id/cv_test_countdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="获取验证码"
+                    android:textColor="@color/colorBlack" />
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_login"
+                style="@style/ButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="登录页面" />
+
+            <!--指示器-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/shape_corner_cal_history"
+                android:padding=".8dp">
+
+                <TextView
+                    android:id="@+id/tv_tab_news"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cal_history_background_selector"
+                    android:gravity="center"
+                    android:text="新闻"
+                    android:textColor="@color/cal_history_color_text_selector"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width=".8dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/red" />
+
+                <TextView
+                    android:id="@+id/tv_tab_hotgoods"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cal_history_background_selector"
+                    android:gravity="center"
+                    android:text="辣品"
+                    android:textColor="@color/cal_history_color_text_selector"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width=".8dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/red" />
+
+                <TextView
+                    android:id="@+id/tv_tab_community"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/cal_history_background_selector"
+                    android:gravity="center"
+                    android:text="圈子"
+                    android:textColor="@color/cal_history_color_text_selector"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="uitest.star.com.uiset.demo.customview.qqstep.QQStepViewActivity">
+
+    <include layout="@layout/toolbar_layout" />
+
+
+    <uitest.star.com.uiset.ui.widget.QQStepView
+        android:id="@+id/stepView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:borderWidth="12dp"
+        app:innerColor="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:outerColor="@color/colorPrimaryDark"
+        app:stepCurrent="200"
+        app:stepMax="1000"
+        app:stepTextColor="@color/colorAccent"
+        app:stepTextSize="16sp" />
+
+    <Button
+        android:id="@+id/bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="变"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stepView" />
+
+</android.support.constraint.ConstraintLayout>

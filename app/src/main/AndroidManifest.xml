@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="uitest.star.com.uiset">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 自定义 -->
+        <activity
+            android:name=".demo.customview.qqstep.QQStepViewActivity"
+            android:label="QQStepView" />
+        <activity
+            android:name=".demo.customview.colortrack.ColorTrackActivity"
+            android:label="字体变色" />
+        <activity
+            android:name=".demo.customview.anim58.Anim58Activity"
+            android:label="58同城数据加载动画" />
+        <activity android:name=".demo.customview.custom.CustomViewActivity" />
+        <activity
+            android:name=".demo.customview.ratingbar.RatingBarActivity"
+            android:label="RatingBar" />
+        <activity
+            android:name=".demo.customview.letter.LetterSideActivity"
+            android:label="字母索引指示器" />
+        <activity android:name=".demo.customview.yahu.YahuActivity" />
+        <activity android:name=".demo.customview.parallax.ParallaxActivity" />
+        <activity android:name=".demo.customview.qqslide.QQSlideActivity" />
+        <activity
+            android:name=".demo.customview.car.CarHomeActivity"
+            android:label="仿汽车之家" />
+        <activity
+            android:name=".demo.customview.Loading.LoadingViewActivity"
+            android:label="花束直播加载效果" />
+        <activity
+            android:name=".demo.customview.flow.FlowLayoutActivity"
+            android:label="FlowLayout" />
+        <activity
+            android:name=".demo.customview.red.RedPackageActivity"
+            android:label="抢红包特效" />
+        <activity
+            android:name=".demo.customview.menu.MenuActivity"
+            android:label="菜单筛选" />
+
+        <!-- 控件 -->
+        <activity
+            android:name=".demo.customview.navigation.BottomNavigationViewActivity"
+            android:label="BottomNavigationView" />
+        <activity
+            android:name=".demo.view.dropdown.DropdownViewActivity"
+            android:label="DropDownView" />
+        <activity
+            android:name=".demo.customview.side.SidePullDelActivity"
+            android:label="侧拉删除" />
+        <activity
+            android:name=".demo.view.okdialog.DialogActivity"
+            android:label="万能Dialog" />
+        <activity
+            android:name=".demo.view.toolbar.ToolBarActivity"
+            android:label="Builder标题栏" />
+        <activity
+            android:name=".demo.view.bottom.BottomSheetDialogActivity"
+            android:label="BottomSheetDialog" />
+        <activity
+            android:name=".demo.view.ui.AppUIActivity"
+            android:label="App常用UI" />
+        <activity android:name=".demo.view.ui.LoginActivity" />
+        <activity
+            android:name=".demo.view.dialog.CommonDialogActivity"
+            android:label="常用dialog" />
+
+        <!-- 架构 -->
+        <activity
+            android:name=".demo.framework.aop.AopActivity"
+            android:label="AOP面向切面编程" />
+        <activity
+            android:name=".demo.framework.state.StateModeActivity"
+            android:label="Android状态模式" />
+        <activity android:name=".demo.framework.state.LoginActivity" />
+        <activity
+            android:name=".demo.framework.event.EventDispatchActivity"
+            android:label="事件分发" />
+        <activity
+            android:name=".demo.framework.handler.HandlerActivity"
+            android:label="手写Handler" />
+        <activity
+            android:name=".demo.framework.ioc.IocActivity"
+            android:label="IOC注解框架" />
+        <activity
+            android:name=".demo.framework.strategy.StrategyModeActivity"
+            android:label="策略模式" />
+        <activity
+            android:name=".demo.framework.alive.KeepAliveServiceActivity"
+            android:label="进程保活" />
+
+        <service android:name=".demo.framework.alive.MessageService" />
+        <service
+            android:name=".demo.framework.alive.GuardService"
+            android:process=":guardService" />
+
+        <activity
+            android:name=".demo.framework.service.ServiceActivity"
+            android:label="Service"></activity>
+
+        <service android:name=".demo.framework.service.MyService">
+            <intent-filter>
+                <action android:name="github.com.yexingshuai"></action>
+            </intent-filter>
+
+        </service>
+
+
+    </application>
+
+</manifest>

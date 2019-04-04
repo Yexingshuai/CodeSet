@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="uitest.star.com.uiset.demo.framework.alive.KeepAliveServiceActivity">
+
+    <include layout="@layout/toolbar_layout" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="1.应用正在运行，这个时候内存不足回收杀进程\n2.系统自带或者第三方清理软件，也会杀掉我们的进程\n3.各大Rom厂商在应用退出的时候会清理杀进程" />
+ <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="详情看代码！！！！！" />
+
+</LinearLayout>

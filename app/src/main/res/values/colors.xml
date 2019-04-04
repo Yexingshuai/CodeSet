@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <!--状态栏的颜色-->
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorBlack">#030303</color>
+
+    <!--Button-->
+    <color name="colorAccent1">#5A8DDF</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="colorTextDark2">#c4d9d9</color>
+    <color name="gray">#77787b</color>
+    <color name="red">#f00</color>
+    <color name="white90">#EEFFFFFF</color>
+    <!-- 按钮按压时的颜色 -->
+    <color name="colorButtonPressed">#1976d2</color>
+    <!-- 按钮禁用时的颜色 -->
+    <color name="colorButtonDisable">#DDDDDD</color>
+    <!-- 分割线的颜色 -->
+    <color name="colorLine">#ECECEC</color>
+
+    <color name="triangle">#aa72d572</color>
+    <color name="circle">#aa738ffe</color>
+    <color name="rect">#aae84e40</color>
+    <color name="button_normal">#5A8DDF</color>
+
+    <!--DropDown-->
+    <color name="drop_down_selected">#7B1FA2</color>
+    <color name="drop_down_unselected">#111111</color>
+    <color name="transparent">#00000000</color>
+    <color name="mask_color">#88888888</color>
+    <color name="check_bg">#f2f2f2</color>
+    <color name="un_press_color">#9C27B0</color>
+
+
+    <color name="orange">#ff9600</color>
+    <color name="aqua">#02d1ac</color>
+    <color name="yellow">#ffd200</color>
+    <color name="blue">#00c6ff</color>
+    <color name="green">#00ed99</color>
+    <color name="pink">#ff3891</color>
+
+    <array name="splash_circle_colors">
+        <item name="orange">#ff9600</item>
+        <item name="aqua">#02d1ac</item>
+        <item name="yellow">#ffd200</item>
+        <item name="blue">#00c6ff</item>
+        <item name="green">#00ed99</item>
+        <item name="pink">#ff3891</item>
+    </array>
+</resources>

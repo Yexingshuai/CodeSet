@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="uitest.star.com.uiset.demo.framework.aop.AopActivity">
+
+    <include layout="@layout/toolbar_layout"></include>
+
+    <TextView
+        android:id="@+id/tv_definition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="定义：把某一方面的一些功能提取出来与一批对象进行隔离，提取之后我们就可以对某个单方面的功能进行编程"
+        app:layout_constraintTop_toBottomOf="@+id/ll_toolbar" />
+
+
+    <TextView
+        android:id="@+id/tv_advantage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:text="好处：1.只需关心业务核心逻辑 2.维护工作变得轻松 3.切面就是横切面，代表的是一个普遍存在的功能，例如日志切面，权限切面，事物切面。"
+        app:layout_constraintTop_toBottomOf="@+id/tv_definition" />
+
+    <TextView
+        android:id="@+id/tv_explain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:text="用了aspectj第三方的编译器，class文件是由aspect去编译，会copy我们的代码，自己再做处理"
+        app:layout_constraintTop_toBottomOf="@+id/tv_advantage" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:text="OOP(面向对象编程：将功能模块化，对象化):\nAOP(面向切面编程：针对同一类问题集中处理，通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术。AOP是OOP的延续)"
+        app:layout_constraintTop_toBottomOf="@+id/tv_explain" />
+
+
+
+
+</android.support.constraint.ConstraintLayout>

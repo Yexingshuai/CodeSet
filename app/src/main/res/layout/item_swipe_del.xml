@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<uitest.star.com.uiset.ui.widget.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+
+    <!--&lt;!&ndash;正文部分&ndash;&gt;-->
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/green"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/elephant"
+            android:tint="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <!--侧栏部分-->
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@color/red"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_call"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#888888"
+            android:gravity="center"
+            android:padding="8dp"
+
+            android:text="呼叫" />
+
+        <TextView
+            android:id="@+id/tv_Del"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="删除" />
+
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+
+</uitest.star.com.uiset.ui.widget.SwipeLayout>

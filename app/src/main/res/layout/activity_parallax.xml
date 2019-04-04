@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@android:color/holo_orange_dark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <uitest.star.com.uiset.ui.widget.ParallaxViewPager
+        android:id="@+id/parallax_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></uitest.star.com.uiset.ui.widget.ParallaxViewPager>
+
+</android.support.constraint.ConstraintLayout>
