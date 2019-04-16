@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/item1"
         android:icon="@drawable/ic_window_flower"
-        android:title="@string/bottom_item1" />
+        android:title="@string/bottom_item1"
+        app:showAsAction="always" />
     <item
         android:id="@+id/item2"
         android:icon="@drawable/ic_window_snowmoon"
-        android:title="@string/bottom_item2" />
+        android:title="@string/bottom_item2"
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/item3"
         android:icon="@drawable/ic_menu_attitude"
-        android:title="@string/bottom_item3" />
+        android:title="@string/bottom_item3"
+        app:showAsAction="never" />
+
+    <!--always 代表 永远显示在菜单上-->
+    <!--ifRoom 表达 如果空间够了的话 放在菜单上-->
+    <!--never  只显示在菜单列表上-->
 
 
 </menu>

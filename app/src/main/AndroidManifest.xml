@@ -83,6 +83,16 @@
         <activity
             android:name=".demo.view.dialog.CommonDialogActivity"
             android:label="常用dialog" />
+        <activity
+            android:name=".demo.view.material.MaterialDesignActivity"
+            android:label="MaterialDesign" />
+        <activity
+            android:name=".demo.view.material.MateriaCardActivity"
+            android:label="CardLayout" />
+        <activity
+            android:name=".demo.view.material.CollapsingActivity"
+            android:label="折叠布局"
+            android:theme="@style/MyAppTheme"></activity>
 
         <!-- 架构 -->
         <activity
@@ -115,13 +125,12 @@
 
         <activity
             android:name=".demo.framework.service.ServiceActivity"
-            android:label="Service"></activity>
+            android:label="Service" />
 
         <service android:name=".demo.framework.service.MyService">
             <intent-filter>
-                <action android:name="github.com.yexingshuai"></action>
+                <action android:name="github.com.yexingshuai" />
             </intent-filter>
-
         </service>
 
 
