@@ -28,6 +28,7 @@ import uitest.star.com.uiset.demo.framework.aop.AopActivity;
 import uitest.star.com.uiset.demo.framework.event.EventDispatchActivity;
 import uitest.star.com.uiset.demo.framework.handler.HandlerActivity;
 import uitest.star.com.uiset.demo.framework.ioc.IocActivity;
+import uitest.star.com.uiset.demo.framework.notification.NotificationBarAdaptationActivity;
 import uitest.star.com.uiset.demo.framework.service.ServiceActivity;
 import uitest.star.com.uiset.demo.framework.state.StateModeActivity;
 import uitest.star.com.uiset.demo.framework.strategy.StrategyModeActivity;
@@ -109,6 +110,7 @@ public class MainActivity extends UIActivity {
         mFrameWorkList.add(new Tab("策略设计模式", StrategyModeActivity.class));
         mFrameWorkList.add(new Tab("Service保活", KeepAliveServiceActivity.class));
         mFrameWorkList.add(new Tab("Service", ServiceActivity.class));
+        mFrameWorkList.add(new Tab("8.0通知适配", NotificationBarAdaptationActivity.class));
 
 
         mViewPager.setAdapter(new MyFragmentPagerAdapter(getSupportFragmentManager(), mTitle, mList));

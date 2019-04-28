@@ -133,6 +133,10 @@
             </intent-filter>
         </service>
 
+        <activity
+            android:name=".demo.framework.notification.NotificationBarAdaptationActivity"
+            android:label="8.0系统通知栏适配" />
+
 
     </application>
 
