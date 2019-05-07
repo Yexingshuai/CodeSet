@@ -115,14 +115,14 @@ public class FlowLayout extends ViewGroup {
     /**
      * 对View的位置进行排版       容器可能有padding ,需要把它算进去
      *
-     * @param b
-     * @param i
-     * @param i1
-     * @param i2
-     * @param i3
+     * @param b      参数b代表view 是否有新的尺寸或位置
+     * @param left   相对与父View的Left位置
+     * @param top    相对与父View的top位置
+     * @param right  相对与父View的right位置
+     * @param bottom 相对与父View的bottom位置
      */
     @Override
-    protected void onLayout(boolean b, int i, int i1, int i2, int i3) {
+    protected void onLayout(boolean b, int left, int top, int right, int bottom) {
 
         int rightTemp = 0; //用于保存一行view中上一个View的Right坐标
 
