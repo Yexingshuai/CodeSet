@@ -45,7 +45,7 @@ import uitest.star.com.uiset.ui.adapter.MyFragmentPagerAdapter;
 public class MainActivity extends UIActivity {
 
 
-    private TabLayout mTabLayout;//789
+    private TabLayout mTabLayout;//666
     private ViewPager mViewPager;
     private List<Tab> mCustomViewList = new ArrayList<>();
     private List<Tab> mViewList = new ArrayList<>();
