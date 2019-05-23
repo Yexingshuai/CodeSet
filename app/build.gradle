@@ -37,4 +37,12 @@ dependencies {
 
     // 侧滑功能：https://github.com/bingoogolapple/BGASwipeBackLayout-Android
     implementation 'cn.bingoogolapple:bga-swipebacklayout:1.2.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+    //下拉刷新
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-26'
+    implementation 'com.android.support:appcompat-v7:25.3.1'//版本 23以上（必须）
+
 }
