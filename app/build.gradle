@@ -44,5 +44,6 @@ dependencies {
     //下拉刷新
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-26'
     implementation 'com.android.support:appcompat-v7:25.3.1'//版本 23以上（必须）
+    implementation 'com.google.code.gson:gson:2.8.5'
 
 }

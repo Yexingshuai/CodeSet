@@ -20,6 +20,7 @@ import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.Point;
 import android.os.Build;
+import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.WindowManager;
 
@@ -43,6 +44,30 @@ public class DeviceUtils {
 			display.getSize(point);
 			return point;
 		}
+	}
+
+
+	/**
+	 * 获得屏幕宽度，单位px
+	 *
+	 * @param context 上下文
+	 * @return 屏幕宽度
+	 */
+	public static int getScreenWidth(Context context) {
+		DisplayMetrics dm = context.getResources().getDisplayMetrics();
+		return dm.widthPixels;
+	}
+
+
+	/**
+	 * 获得屏幕高度
+	 *
+	 * @param context 上下文
+	 * @return 屏幕宽度
+	 */
+	public static int getScreenHeight(Context context) {
+		DisplayMetrics dm = context.getResources().getDisplayMetrics();
+		return dm.heightPixels;
 	}
 
 

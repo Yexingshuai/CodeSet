@@ -35,6 +35,7 @@ import uitest.star.com.uiset.demo.framework.strategy.StrategyModeActivity;
 import uitest.star.com.uiset.demo.view.bottom.BottomSheetDialogActivity;
 import uitest.star.com.uiset.demo.view.dialog.CommonDialogActivity;
 import uitest.star.com.uiset.demo.view.dropdown.DropdownViewActivity;
+import uitest.star.com.uiset.demo.view.emoji.EmojiActivity;
 import uitest.star.com.uiset.demo.view.material.MaterialDesignActivity;
 import uitest.star.com.uiset.demo.view.okdialog.DialogActivity;
 import uitest.star.com.uiset.demo.view.toolbar.ToolBarActivity;
@@ -100,6 +101,7 @@ public class MainActivity extends UIActivity {
         mViewList.add(new Tab("App常用UI", AppUIActivity.class));
         mViewList.add(new Tab("常用对话框", CommonDialogActivity.class));
         mViewList.add(new Tab("Material Design", MaterialDesignActivity.class));
+        mViewList.add(new Tab("Emoji", EmojiActivity.class));
 
         //架构
         mFrameWorkList.add(new Tab("AOP切面编程", AopActivity.class));

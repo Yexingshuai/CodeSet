@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.LayoutActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:elevation="0dp"
+            app:expanded="true">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:titleEnabled="false">
+
+                <ImageView
+                    android:id="@+id/iv_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/fruit" />
+
+
+                <LinearLayout
+                    android:id="@+id/llContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="80dp"
+                    android:orientation="vertical"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                    <android.support.v4.view.ViewPager
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginRight="13dp"
+                        android:background="#0077D9"></android.support.v4.view.ViewPager>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginRight="13dp"
+                        android:text="咖啡华夫脆风味星冰乐"
+                        android:textColor="@color/black"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="13dp"
+                        android:text="Everything dragme make me feel the light"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="13dp"
+                        android:text="Everything dragme make me feel the light"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+
+                </LinearLayout>
+
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:background="#ffffff"
+                    app:contentInsetStart="0dp"
+                    app:layout_collapseMode="pin"
+                    app:title="导航栏">
+
+                </android.support.v7.widget.Toolbar>
+
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00c6ff"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@color/white"
+                app:tabIndicatorHeight="3.5dp"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/white"
+                app:tabTextAppearance="@style/TabLayoutTextSize"
+                app:tabTextColor="@color/colorTextDark2" />
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"></android.support.v4.view.ViewPager>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

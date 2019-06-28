@@ -78,6 +78,14 @@ public class MaterialDesignActivity extends AppCompatActivity {
             }
         });
 
+        Button bt_fragment = findViewById(R.id.bt_fragment);
+        bt_fragment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MaterialDesignActivity.this, CollapsingFragmentActivity.class));
+            }
+        });
+
     }
 
     protected void initData() {

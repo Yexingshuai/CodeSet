@@ -137,6 +137,8 @@
         <activity
             android:name=".demo.framework.notification.NotificationBarAdaptationActivity"
             android:label="8.0系统通知栏适配" />
+        <activity android:name=".demo.view.material.CollapsingFragmentActivity" />
+        <activity android:name=".demo.view.emoji.EmojiActivity" />
 
 
         <!--适配7.0-->
