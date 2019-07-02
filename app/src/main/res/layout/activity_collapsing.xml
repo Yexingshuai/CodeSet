@@ -29,7 +29,7 @@
                 android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
                 app:contentScrim="@color/colorPrimary"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed"
-                app:titleEnabled="false">
+                app:titleEnabled="true">
                 <!--  app:contentScrim="@color/transparent"-->
                 <!--   app:titleEnabled="false"-->
                 <!--是否显示标题-->
@@ -118,13 +118,13 @@
         </android.support.v4.widget.NestedScrollView>
         <!--</android.support.v4.widget.SwipeRefreshLayout>-->
 
-        <!--<android.support.design.widget.FloatingActionButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_margin="16dp"-->
-        <!--android:src="@drawable/ic_add_a_photo_black_24dp"-->
-        <!--app:layout_anchor="@id/appbar"-->
-        <!--app:layout_anchorGravity="end|bottom" />-->
+        <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_add_a_photo_black_24dp"
+        app:layout_anchor="@id/appbar"
+        app:layout_anchorGravity="end|bottom" />
     </android.support.design.widget.CoordinatorLayout>
 
 </android.support.v4.widget.SwipeRefreshLayout>
