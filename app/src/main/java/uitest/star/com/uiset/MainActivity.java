@@ -8,6 +8,7 @@ import java.util.List;
 
 import uitest.star.com.uiset.base.UIActivity;
 import uitest.star.com.uiset.demo.customview.Loading.LoadingViewActivity;
+import uitest.star.com.uiset.demo.customview.Train.TrainActivity;
 import uitest.star.com.uiset.demo.customview.anim58.Anim58Activity;
 import uitest.star.com.uiset.demo.customview.car.CarHomeActivity;
 import uitest.star.com.uiset.demo.customview.colortrack.ColorTrackActivity;
@@ -91,6 +92,7 @@ public class MainActivity extends UIActivity {
         mCustomViewList.add(new Tab("侧拉删除", SidePullDelActivity.class));
         mCustomViewList.add(new Tab("抢红包特效", RedPackageActivity.class));
         mCustomViewList.add(new Tab("菜单筛选", MenuActivity.class));
+        mCustomViewList.add(new Tab("仿12306", TrainActivity.class));
 
         //控件
         mViewList.add(new Tab("BottomNav", BottomNavigationViewActivity.class));
