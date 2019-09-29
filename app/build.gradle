@@ -17,7 +17,6 @@ def releaseTime() {
     sb.append(year)
     sb.append("年")
     sb.append(month)
-    sb.append("月")
     sb.append(day)
     sb.append("日")
     sb.append(hour)
@@ -82,8 +81,9 @@ android {
         variant.outputs.all {
             if (outputFileName.endsWith('release.apk')) {
                 outputFileName = "CodeSet_${defaultConfig.versionCode}_${defaultConfig.versionName}" + "_" + releaseTime() + "_release.apk"
+
             } else if (outputFileName.endsWith('debug.apk')) {
-//                outputFileName = "CodeSet_${defaultConfig.versionCode}_${defaultConfig.versionName}" + "_" + releaseTime() + "_debug.apk"
+                outputFileName = "CodeSet_${defaultConfig.versionCode}_${defaultConfig.versionName}" + "_" + releaseTime() + "_debug.apk"
             }
         }
     }
