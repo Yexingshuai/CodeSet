@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 
 import uitest.star.com.uiset.R;
+import uitest.star.com.uiset.utils.ToastUtil;
 
 /**
  * Created by yexing on 2018/12/18.
@@ -99,7 +100,17 @@ public class QQStepView extends View {
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         //调用者在布局文件中 可能是wrap_content ,也有可能宽高不一致
-
+        switch (MeasureSpec.getMode(widthMeasureSpec)) {
+            case MeasureSpec.AT_MOST:
+                ToastUtil.showApp("AT MOST");
+                break;
+            case MeasureSpec.EXACTLY:
+                ToastUtil.showApp("EXACTLY");
+                break;
+            case MeasureSpec.UNSPECIFIED:
+                ToastUtil.showApp("UNSPECIFIED");
+                break;
+        }
         //当宽高不一致时，取最小值
         int width = MeasureSpec.getSize(widthMeasureSpec);
         int height = MeasureSpec.getSize(heightMeasureSpec);

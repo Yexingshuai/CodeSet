@@ -8,6 +8,7 @@ import java.util.List;
 
 import uitest.star.com.uiset.base.UIActivity;
 import uitest.star.com.uiset.demo.customview.Loading.LoadingViewActivity;
+import uitest.star.com.uiset.demo.customview.Train.TrainActivity;
 import uitest.star.com.uiset.demo.customview.anim58.Anim58Activity;
 import uitest.star.com.uiset.demo.customview.car.CarHomeActivity;
 import uitest.star.com.uiset.demo.customview.colortrack.ColorTrackActivity;
@@ -35,6 +36,7 @@ import uitest.star.com.uiset.demo.framework.strategy.StrategyModeActivity;
 import uitest.star.com.uiset.demo.view.bottom.BottomSheetDialogActivity;
 import uitest.star.com.uiset.demo.view.dialog.CommonDialogActivity;
 import uitest.star.com.uiset.demo.view.dropdown.DropdownViewActivity;
+import uitest.star.com.uiset.demo.view.emoji.EmojiActivity;
 import uitest.star.com.uiset.demo.view.material.MaterialDesignActivity;
 import uitest.star.com.uiset.demo.view.okdialog.DialogActivity;
 import uitest.star.com.uiset.demo.view.toolbar.ToolBarActivity;
@@ -45,7 +47,7 @@ import uitest.star.com.uiset.ui.adapter.MyFragmentPagerAdapter;
 public class MainActivity extends UIActivity {
 
 
-    private TabLayout mTabLayout;//888
+    private TabLayout mTabLayout;//888-666
     private ViewPager mViewPager;
     private List<Tab> mCustomViewList = new ArrayList<>();
     private List<Tab> mViewList = new ArrayList<>();
@@ -90,6 +92,7 @@ public class MainActivity extends UIActivity {
         mCustomViewList.add(new Tab("侧拉删除", SidePullDelActivity.class));
         mCustomViewList.add(new Tab("抢红包特效", RedPackageActivity.class));
         mCustomViewList.add(new Tab("菜单筛选", MenuActivity.class));
+        mCustomViewList.add(new Tab("仿12306", TrainActivity.class));
 
         //控件
         mViewList.add(new Tab("BottomNav", BottomNavigationViewActivity.class));
@@ -100,6 +103,7 @@ public class MainActivity extends UIActivity {
         mViewList.add(new Tab("App常用UI", AppUIActivity.class));
         mViewList.add(new Tab("常用对话框", CommonDialogActivity.class));
         mViewList.add(new Tab("Material Design", MaterialDesignActivity.class));
+        mViewList.add(new Tab("Emoji", EmojiActivity.class));
 
         //架构
         mFrameWorkList.add(new Tab("AOP切面编程", AopActivity.class));

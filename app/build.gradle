@@ -1,5 +1,54 @@
 apply plugin: 'com.android.application'
 
+
+//发布时间
+def releaseTime() {
+
+    Calendar calendar = Calendar.getInstance()
+    String year = calendar.get(Calendar.YEAR)
+    String month = calendar.get(Calendar.MONTH) + 1
+    String day = calendar.get(Calendar.DAY_OF_MONTH)
+    String hour = calendar.get(Calendar.HOUR_OF_DAY)
+    String minute = calendar.get(Calendar.MINUTE)
+    String second = calendar.get(Calendar.SECOND)
+
+
+    StringBuffer sb = new StringBuffer()
+    sb.append(year)
+    sb.append("年")
+    sb.append(month)
+    sb.append("月")
+    sb.append(day)
+    sb.append("日")
+    sb.append(hour)
+    sb.append("时")
+    sb.append(minute)
+    sb.append("分")
+    sb.append(second)
+    sb.append("秒")
+
+    return sb.toString();
+}
+
+//版本名称
+def VERSION_NAME = "3.1"
+//版本号
+def VERSION_CODE = 3
+
+ext.appReleaseDir = ""
+
+def loadProperties() {
+    def Properties props = new Properties()
+    def propFile = file('../local.properties') //加载properties文件
+    if (propFile.canRead()) {
+        props.load(new FileInputStream(propFile))
+        appReleaseDir = props.appReleaseDir
+    }
+}
+
+loadProperties()
+
+
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
@@ -8,16 +57,44 @@ android {
         applicationId "uitest.star.com.uiset"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode rootProject.ext.versionCode
-        versionName rootProject.ext.versionName
+        versionCode VERSION_CODE
+        versionName VERSION_NAME
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    //不检查res
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    lintOptions {
+        abortOnError false  //当lint发现错误时，不会停止构建
+    }
+
+    //定义打包的格式
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            if (outputFileName.endsWith('release.apk')) {
+                outputFileName = "CodeSet_${defaultConfig.versionCode}_${defaultConfig.versionName}" + "_" + releaseTime() + "_release.apk"
+            } else if (outputFileName.endsWith('debug.apk')) {
+//                outputFileName = "CodeSet_${defaultConfig.versionCode}_${defaultConfig.versionName}" + "_" + releaseTime() + "_debug.apk"
+            }
+        }
+    }
+
+}
+
+//获取时间戳
+def getDate() {
+    def date = new Date()
+    def formattedDate = date.format('yyyyMMddHHmm')
+    return formattedDate
 }
 
 dependencies {
@@ -44,5 +121,6 @@ dependencies {
     //下拉刷新
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-26'
     implementation 'com.android.support:appcompat-v7:25.3.1'//版本 23以上（必须）
+    implementation 'com.google.code.gson:gson:2.8.5'
 
 }

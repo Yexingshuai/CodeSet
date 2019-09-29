@@ -34,6 +34,13 @@
             android:gravity="center"
             android:text="可折叠式标题栏" />
 
+        <Button
+            android:id="@+id/bt_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="可折叠式Fragment" />
+
     </LinearLayout>
 
 

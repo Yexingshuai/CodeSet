@@ -57,6 +57,8 @@
         <activity
             android:name=".demo.customview.menu.MenuActivity"
             android:label="菜单筛选" />
+        <activity android:name=".demo.customview.Train.TrainActivity"
+            android:label="仿12306"/>
 
         <!-- 控件 -->
         <activity
@@ -137,6 +139,9 @@
         <activity
             android:name=".demo.framework.notification.NotificationBarAdaptationActivity"
             android:label="8.0系统通知栏适配" />
+        <activity android:name=".demo.view.material.CollapsingFragmentActivity" />
+        <activity android:name=".demo.view.emoji.EmojiActivity" />
+
 
 
         <!--适配7.0-->

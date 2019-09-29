@@ -7,12 +7,12 @@ import android.widget.Toast;
 
 /**
  * @author pd_liu on 2018/3/1.
- *         <p>
- *         吐司工具类
- *         </p>
- *         <p>
- *         {@link #showApp(String)}
- *         </p>
+ * <p>
+ * 吐司工具类
+ * </p>
+ * <p>
+ * {@link #showApp(String)}
+ * </p>
  */
 
 public class ToastUtil {
@@ -71,9 +71,9 @@ public class ToastUtil {
     }
 
     private static final void toast(Context context, String msg) {
-//        if (mToast == null) {
-        mToast = Toast.makeText(context, msg, Toast.LENGTH_SHORT);
-//        }
+        if (mToast == null) {
+            mToast = Toast.makeText(context, msg, Toast.LENGTH_SHORT);
+        }
 
         mToast.setText(msg);
         mToast.show();
