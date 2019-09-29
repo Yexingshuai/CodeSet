@@ -34,7 +34,7 @@ def VERSION_NAME = "3.1"
 //版本号
 def VERSION_CODE = 3
 
-ext.appReleaseDir = ""
+ext.appReleaseDir = "/Users/yexing/Desktop/release"
 
 def loadProperties() {
     def Properties props = new Properties()
@@ -85,6 +85,19 @@ android {
             } else if (outputFileName.endsWith('debug.apk')) {
                 outputFileName = "CodeSet_${defaultConfig.versionCode}_${defaultConfig.versionName}" + "_" + releaseTime() + "_debug.apk"
             }
+
+//            if (variant.buildType.name.equals('release')) {  //如果是release版本
+//                variant.outputs.each { output ->
+////                    def outputFile = output.outputFile
+//                    if (outputFile != null && outputFile.name.endsWith('.apk')) {  //查找所有的apk
+//                        def fileName = "CodeSet_${defaultConfig.versionCode}_${defaultConfig.versionName}" + "_" + releaseTime() + "_release.apk" //重新定义apk的名称
+////                        output.outputFile = new File(output.outputFile.parent, fileName)  //outputFile.parent参数可以改成你你想要的发布路径
+//                    }
+//                }
+//            }
+
+
+
         }
     }
 
