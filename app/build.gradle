@@ -52,6 +52,11 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     defaultConfig {
         applicationId "uitest.star.com.uiset"
         minSdkVersion rootProject.ext.minSdkVersion
@@ -60,6 +65,8 @@ android {
         versionName VERSION_NAME
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+
 
     //不检查res
     aaptOptions.cruncherEnabled = false
@@ -86,7 +93,7 @@ android {
 
             } else if (outputFileName.endsWith('debug.apk')) {
                 outputFileName = "CodeSet_${defaultConfig.versionCode}_${defaultConfig.versionName}" + "_" + releaseTime() + "_debug.apk"
-                variant.getPackageApplication().outputDirectory = new File("/Users/yexing/Desktop/release")
+//                variant.getPackageApplication().outputDirectory = new File("/Users/yexing/Desktop/release")
             }
 
 //            if (variant.buildType.name.equals('release')) {  //如果是release版本
