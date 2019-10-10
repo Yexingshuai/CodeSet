@@ -81,9 +81,12 @@ android {
         variant.outputs.all {
             if (outputFileName.endsWith('release.apk')) {
                 outputFileName = "CodeSet_${defaultConfig.versionCode}_${defaultConfig.versionName}" + "_" + releaseTime() + "_release.apk"
+//                variant.getPackageApplication().outputDirectory = new File(project.rootDir.absolutePath+File.separator+"apk")
+
 
             } else if (outputFileName.endsWith('debug.apk')) {
                 outputFileName = "CodeSet_${defaultConfig.versionCode}_${defaultConfig.versionName}" + "_" + releaseTime() + "_debug.apk"
+                variant.getPackageApplication().outputDirectory = new File("/Users/yexing/Desktop/release")
             }
 
 //            if (variant.buildType.name.equals('release')) {  //如果是release版本
