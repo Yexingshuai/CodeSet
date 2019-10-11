@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
 
+Properties signingProperties = new Properties()
+signingProperties.load(new FileInputStream(file("../signings/signing.properties")))
 
 //发布时间
 def releaseTime() {
@@ -72,9 +74,35 @@ android {
     aaptOptions.cruncherEnabled = false
     aaptOptions.useNewCruncher = false
 
-    buildTypes {
+
+    signingConfigs {
+        debug {
+            storeFile file(signingProperties['KEYSTORE_FILEPATH'])
+            keyAlias signingProperties['KEY_ALIAS']
+            keyPassword signingProperties['KEY_PASSWORD']
+            storePassword signingProperties['STORE_PASSWORD']
+        }
         release {
+            storeFile file(signingProperties['KEYSTORE_FILEPATH'])
+            keyAlias signingProperties['KEY_ALIAS']
+            keyPassword signingProperties['KEY_PASSWORD']
+            storePassword signingProperties['STORE_PASSWORD']
+        }
+    }
+
+    buildTypes {
+        debug {
             minifyEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+
+        release {
+            minifyEnabled true
+            shrinkResources true
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -82,6 +110,8 @@ android {
     lintOptions {
         abortOnError false  //当lint发现错误时，不会停止构建
     }
+
+
 
     //定义打包的格式
     applicationVariants.all { variant ->
@@ -96,29 +126,11 @@ android {
 //                variant.getPackageApplication().outputDirectory = new File("/Users/yexing/Desktop/release")
             }
 
-//            if (variant.buildType.name.equals('release')) {  //如果是release版本
-//                variant.outputs.each { output ->
-////                    def outputFile = output.outputFile
-//                    if (outputFile != null && outputFile.name.endsWith('.apk')) {  //查找所有的apk
-//                        def fileName = "CodeSet_${defaultConfig.versionCode}_${defaultConfig.versionName}" + "_" + releaseTime() + "_release.apk" //重新定义apk的名称
-////                        output.outputFile = new File(output.outputFile.parent, fileName)  //outputFile.parent参数可以改成你你想要的发布路径
-//                    }
-//                }
-//            }
-
-
-
         }
     }
 
 }
 
-//获取时间戳
-def getDate() {
-    def date = new Date()
-    def formattedDate = date.format('yyyyMMddHHmm')
-    return formattedDate
-}
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
