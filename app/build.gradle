@@ -32,9 +32,9 @@ def releaseTime() {
 }
 
 //版本名称
-def VERSION_NAME = "3.1"
+def VERSION_NAME = "4.1"
 //版本号
-def VERSION_CODE = 3
+def VERSION_CODE = 4
 
 ext.appReleaseDir = "/Users/yexing/Desktop/release"
 
