@@ -53,7 +53,7 @@ public class MainActivity extends UIActivity {
     private List<Tab> mViewList = new ArrayList<>();
     private List<Tab> mFrameWorkList = new ArrayList<>();
     private String[] mTitle = {"自定义View", "控件", "架构"};
-    private List[] mList = {mCustomViewList, mViewList, mFrameWorkList};//In Jenkins
+    private List[] mList = {mCustomViewList, mViewList, mFrameWorkList};//In Jenkins 1
 
 
     @Override
