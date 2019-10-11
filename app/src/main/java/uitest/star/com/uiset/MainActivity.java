@@ -77,7 +77,7 @@ public class MainActivity extends UIActivity {
     protected void initData() {
 
         //  自定义View
-        mCustomViewList.add(new Tab("QQStepView", QQStepViewActivity.class));
+        mCustomViewList.add(new Tab("QQStepViewJenkins", QQStepViewActivity.class));
         mCustomViewList.add(new Tab("字体变色", ColorTrackActivity.class));
         mCustomViewList.add(new Tab("58同城动画", Anim58Activity.class));
         mCustomViewList.add(new Tab("自定义View", CustomViewActivity.class));
