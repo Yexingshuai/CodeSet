@@ -3,6 +3,7 @@ apply plugin: 'com.android.application'
 Properties signingProperties = new Properties()
 signingProperties.load(new FileInputStream(file("../signings/signing.properties")))
 
+
 //发布时间
 def releaseTime() {
 
@@ -36,14 +37,26 @@ def VERSION_NAME = "4.1"
 //版本号
 def VERSION_CODE = 4
 
-ext.appReleaseDir = "/Users/yexing/Desktop/release"
 
 def loadProperties() {
-    def Properties props = new Properties()
-    def propFile = file('../local.properties') //加载properties文件
-    if (propFile.canRead()) {
-        props.load(new FileInputStream(propFile))
-        appReleaseDir = props.appReleaseDir
+    def property = project.hasProperty('API_HOST_SERVER');
+    if (property) {
+
+        println(API_HOST_SERVER)
+        File file = new File("app/src/main/assets/CodeSet.properties")
+        def newLines = new ArrayList()
+        //添加自动打包配置项到配置文件
+        newLines.add("host=" + API_HOST_SERVER)
+
+        def writer = file.newPrintWriter()
+        newLines.each { line ->
+            writer.println(line)
+        }
+        writer.flush()
+    } else {
+//            def error = "Parameter host needed !!!"
+//            println(error)
+//            throw new IllegalArgumentException(error)
     }
 }
 
@@ -67,8 +80,6 @@ android {
         versionName VERSION_NAME
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
-
-
 
     //不检查res
     aaptOptions.cruncherEnabled = false
@@ -110,8 +121,6 @@ android {
     lintOptions {
         abortOnError false  //当lint发现错误时，不会停止构建
     }
-
-
 
     //定义打包的格式
     applicationVariants.all { variant ->

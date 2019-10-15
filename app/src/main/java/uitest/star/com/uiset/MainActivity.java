@@ -2,6 +2,7 @@ package uitest.star.com.uiset;
 
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
+import android.text.TextUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,6 +44,7 @@ import uitest.star.com.uiset.demo.view.toolbar.ToolBarActivity;
 import uitest.star.com.uiset.demo.view.ui.AppUIActivity;
 import uitest.star.com.uiset.entity.Tab;
 import uitest.star.com.uiset.ui.adapter.MyFragmentPagerAdapter;
+import uitest.star.com.uiset.utils.ToastUtil;
 
 public class MainActivity extends UIActivity {
 
@@ -54,6 +56,8 @@ public class MainActivity extends UIActivity {
     private List<Tab> mFrameWorkList = new ArrayList<>();
     private String[] mTitle = {"自定义View", "控件", "架构"};
     private List[] mList = {mCustomViewList, mViewList, mFrameWorkList};//In Jenkins 2
+
+    public static String config = "";
 
 
     @Override
@@ -71,6 +75,17 @@ public class MainActivity extends UIActivity {
     protected void initView() {
         mTabLayout = findViewById(R.id.tab_layout);
         mViewPager = findViewById(R.id.viewpager);
+//        if (!TextUtils.isEmpty(BuildConfig.API_HOST)) {
+//            if (TextUtils.equals(BuildConfig.API_HOST, "release")) {
+//                ToastUtil.showApp("正式环境");
+//            } else if (TextUtils.equals(BuildConfig.API_HOST, "debug")) {
+//                ToastUtil.showApp("测试环境");
+//            } else if (BuildConfig.API_HOST.startsWith("192.168.1")) {
+//                ToastUtil.showApp(BuildConfig.API_HOST);
+//            }
+//        } else {
+//            ToastUtil.showApp("BuildConfig.API_HOST为空");
+//        }
     }
 
     @Override
