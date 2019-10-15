@@ -75,17 +75,7 @@ public class MainActivity extends UIActivity {
     protected void initView() {
         mTabLayout = findViewById(R.id.tab_layout);
         mViewPager = findViewById(R.id.viewpager);
-//        if (!TextUtils.isEmpty(BuildConfig.API_HOST)) {
-//            if (TextUtils.equals(BuildConfig.API_HOST, "release")) {
-//                ToastUtil.showApp("正式环境");
-//            } else if (TextUtils.equals(BuildConfig.API_HOST, "debug")) {
-//                ToastUtil.showApp("测试环境");
-//            } else if (BuildConfig.API_HOST.startsWith("192.168.1")) {
-//                ToastUtil.showApp(BuildConfig.API_HOST);
-//            }
-//        } else {
-//            ToastUtil.showApp("BuildConfig.API_HOST为空");
-//        }
+        throw new IllegalStateException("Properties error..");
     }
 
     @Override
