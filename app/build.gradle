@@ -43,7 +43,7 @@ def loadProperties() {
     if (property) {
 
         println(API_HOST_SERVER)
-        File file = new File("app/src/main/assets/CodeSet.properties")
+        File file = new File("../app/src/main/assets/CodeSet.properties")
         def newLines = new ArrayList()
         //添加自动打包配置项到配置文件
         newLines.add("host=" + API_HOST_SERVER)
