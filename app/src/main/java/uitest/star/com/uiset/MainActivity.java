@@ -75,7 +75,6 @@ public class MainActivity extends UIActivity {
     protected void initView() {
         mTabLayout = findViewById(R.id.tab_layout);
         mViewPager = findViewById(R.id.viewpager);
-        throw new IllegalStateException("Properties error..");
     }
 
     @Override
